@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Half-Blood Demigod Cars</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-stone-100 min-h-screen font-serif">
+    <!-- Navigation -->
+    <nav class="bg-gradient-to-r from-amber-700 to-orange-900 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-amber-100">
+                <!-- <img src="camp-logo.png" alt="Camp Half-Blood" class="h-12 inline-block mr-2"> -->
+                Camp Half-Blood 
+            </div>
+            <div class="relative">
+                <input type="text" id="searchBar" 
+                    class="bg-amber-50 border-2 border-amber-600 rounded-full px-4 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    placeholder="Search demigod cars...">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-8">
+        <!-- Add New Car Button -->
+        <button id="addNewCar" 
+            class="mb-8 bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-full shadow-lg transition-all">
+            Add New Demigod Car
+        </button>
+
+        <!-- Cars Grid -->
+        <div id="carsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Modal Template -->
+    <div id="carModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div class="modal-content bg-stone-100 w-11/12 max-w-2xl mx-auto mt-20 rounded-lg shadow-xl p-6">
+            <h2 class="text-2xl font-bold mb-4 text-amber-900">Demigod Car Details</h2>
+            <form id="carForm">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-amber-900">Demigod's Name</label>
+                        <input type="text" name="name" class="w-full p-2 border border-amber-300 rounded">
+                    </div>
+                    <div>
+                        <label class="block text-amber-900">Parent God/Goddess</label>
+                        <select name="parentGod" class="w-full p-2 border border-amber-300 rounded">
+                            <option value="Zeus">Zeus</option>
+                            <option value="Poseidon">Poseidon</option>
+                            <option value="Hades">Hades</option>
+                            <option value="Athena">Athena</option>
+                            <option value="Ares">Ares</option>
+                            <option value="Apollo">Apollo</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-amber-900">Car Type</label>
+                        <input type="text" name="carType" class="w-full p-2 border border-amber-300 rounded">
+                    </div>
+                    <div>
+                        <label class="block text-amber-900">Special Abilities</label>
+                        <textarea name="abilities" class="w-full p-2 border border-amber-300 rounded"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-amber-900">Rarity Level</label>
+                        <select name="rarity" class="w-full p-2 border border-amber-300 rounded">
+                            <option value="Common">Common</option>
+                            <option value="Rare">Rare</option>
+                            <option value="Epic">Epic</option>
+                            <option value="Legendary">Legendary</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-end space-x-4">
+                    <button type="button" class="cancel-modal bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600">
+                        Cancel
+                    </button>
+                    <button type="submit" class="bg-amber-600 text-white px-4 py-2 rounded hover:bg-amber-700">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

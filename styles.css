@@ -1,0 +1,46 @@
+/* Ancient Greek Themed Styles */
+body {
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h20v20H0V0zm10 10L0 0h20L10 10zm0 0L20 20H0L10 10z" fill="%23f3f4f6" fill-opacity="0.4"/></svg>');
+}
+
+.card {
+    transition: transform 0.3s ease-in-out;
+    background: linear-gradient(45deg, #f3e5d3, #fff);
+    border: 2px solid #d4a373;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.modal-content {
+    background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h20v20H0V0zm2 2v16h16V2H2zm2 2h12v12H4V4z" fill="%23d4a373" fill-opacity="0.1"/></svg>');
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.rarity-legendary {
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+}
+
+.rarity-epic {
+    background: linear-gradient(45deg, #9932cc, #800080);
+}
+
+.rarity-rare {
+    background: linear-gradient(45deg, #4169e1, #0000ff);
+}
+
+.rarity-common {
+    background: linear-gradient(45deg, #808080, #696969);
+}
